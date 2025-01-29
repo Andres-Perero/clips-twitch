@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -52,6 +51,5 @@ app.post('/create-clip', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+// Exporta la aplicación como un módulo
+export default app;
